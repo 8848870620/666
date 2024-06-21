@@ -214,7 +214,7 @@ local Library = {}
          Hide.Parent = Navigation 
          Hide.BackgroundColor3 = Color3.fromRGB(50, 50, 50) 
          Hide.BorderSizePixel = 0 
-         Hide.Size = UDim2.new(10, 5, 20, 20) 
+         Hide.Size = UDim2.new(10, 5, 0.01, 0.01) 
   
          Hide2.Name = "Hide2" 
          Hide2.Parent = Navigation 
