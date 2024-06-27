@@ -1,4 +1,4 @@
-local Library = loadstring(game:HttpGet("", true))()
+local Library = loadstring(game:HttpGet("https://github.com/8848870620/666/blob/6a935cbabdad3eedfe269043203dae20064364d0/88481.txt", true))()
 local Window = Library:Create("8848")
 
 local ToggleGui = Instance.new("ScreenGui")
