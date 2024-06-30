@@ -1,4 +1,4 @@
-local Library = {}
+local Library = {} 
   
  local tween = game:GetService("TweenService") 
  local tweeninfo = TweenInfo.new 
@@ -1195,5 +1195,4 @@ local Library = {}
          end 
          return Tabs 
  end 
- return Library"
- https://raw.githubusercontent.com/CloudX-ScriptsWane/UI-library/main/Hyperinterface%20Mobile.lua#:~:text=local%20Library%20%3D%20%7B%7D%20%0A%20%20%0A%20local,end%20%0A%20return%20Library
+ return Library
