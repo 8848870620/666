@@ -108,9 +108,9 @@ local Library = {}
          Main.Name = "Main" 
          Main.Parent = UILibrary 
          Main.AnchorPoint = Vector2.new(0.5, 0.5) 
-         Main.BackgroundColor3 = Color3.fromRGB(15, 15, 15) 
+         Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255) 
          Main.Position = UDim2.new(0.499624401, 0, 0.432387859, 0) 
-         Main.Size = UDim2.new(0, 600, 0, 300) 
+         Main.Size = UDim2.new(200, 600, 200, 300) 
   
          UICorner.CornerRadius = UDim.new(0, 6) 
          UICorner.Parent = Main 
