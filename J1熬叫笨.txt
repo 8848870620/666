@@ -22,6 +22,8 @@ Toggle.TextXAlignment = Enum.TextXAlignment.Left
 Toggle.Active = true
 Toggle.Draggable = true
 Toggle.MouseButton1Click:connect(function()
+Library:ToggleUI()
+end)
 
 Toggle2.Name = "Toggle"
 Toggle2.Parent = ToggleGui
@@ -38,5 +40,5 @@ Toggle2.TextXAlignment = Enum.TextXAlignment.Left
 Toggle2.Active = true
 Toggle2.Draggable = true
 Toggle2.MouseButton1Click:connect(function()
-    Library:ToggleUI()
+    Library:Toggle2UI()
 end)
