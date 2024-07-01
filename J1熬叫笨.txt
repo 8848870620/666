@@ -1,4 +1,4 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/8848870620/666/main/J1%E7%86%AC%E5%8F%AB%E7%AC%A8.txt", true))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/8848870620/666/main/88481.txt", true))()
 local Window = Library:Create("8848")
 
 local ToggleGui = Instance.new("ScreenGui")
@@ -14,7 +14,7 @@ Toggle.BackgroundTransparency = 0.02
 Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
 Toggle.Size = UDim2.new(0.05, 0.8, 0.18, 0.1)
 Toggle.Font = Enum.Font.SourceSans
-Toggle.Text = "隐藏打开"
+Toggle.Text = "隐藏"
 Toggle.TextScaled = true
 Toggle.TextColor3 = Color3.fromRGB(40, 40, 40)
 Toggle.TextSize = 15
@@ -22,5 +22,21 @@ Toggle.TextXAlignment = Enum.TextXAlignment.Left
 Toggle.Active = true
 Toggle.Draggable = true
 Toggle.MouseButton1Click:connect(function()
+
+Toggle2.Name = "Toggle"
+Toggle2.Parent = ToggleGui
+Toggle2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Toggle2.BackgroundTransparency = 0.02
+Toggle2.Position = UDim2.new(0, 0, 0.454706937, 0)
+Toggle2.Size = UDim2.new(0.05, 0.8, 0.18, 0.1)
+Toggle2.Font = Enum.Font.SourceSans
+Toggle2.Text = "打开"
+Toggle2.TextScaled = true
+Toggle2.TextColor3 = Color3.fromRGB(40, 40, 40)
+Toggle2.TextSize = 15
+Toggle2.TextXAlignment = Enum.TextXAlignment.Left
+Toggle2.Active = true
+Toggle2.Draggable = true
+Toggle2.MouseButton1Click:connect(function()
     Library:ToggleUI()
 end)
