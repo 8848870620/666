@@ -14,7 +14,7 @@ Toggle.BackgroundTransparency = 0.02
 Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
 Toggle.Size = UDim2.new(0.05, 0.8, 0.18, 0.1)
 Toggle.Font = Enum.Font.SourceSans
-Toggle.Text = "隐藏打开"
+Toggle.Text = "隐藏"
 Toggle.TextScaled = true
 Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
 Toggle.TextSize = 15
@@ -23,4 +23,34 @@ Toggle.Active = true
 Toggle.Draggable = true
 Toggle.MouseButton1Click:connect(function()
 Library:ToggleUI()
+end)
+
+Toggle2.Name = "Toggle"
+Toggle2.Parent = ToggleGui
+Toggle2.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Toggle2.BackgroundTransparency = 0.02
+Toggle2.Position = UDim2.new(0, 0, 0.454706937, 0)
+Toggle2.Size = UDim2.new(0.05, 0.8, 0.18, 0.1)
+Toggle2.Font = Enum.Font.SourceSans
+Toggle2.Text = "打开"
+Toggle2.TextScaled = true
+Toggle2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toggle2.TextSize = 15
+Toggle2.TextXAlignment = Enum.TextXAlignment.Left
+Toggle2.Active = true
+Toggle2.Draggable = true
+Toggle2.MouseButton1Click:connect(function()
+    Library:Toggle2UI()
+end)
+
+local HomeTab = Window:Tab("通用脚本","rbxassetid://10888331510")
+
+HomeTab:Button("通用")
+
+HomeTab:Button("键盘脚本", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end)
+
+HomeTab:Button("飞行脚本可隐藏", function()
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\90\66\122\99\84\109\49\102\34\41\41\40\41\10")()
 end)
