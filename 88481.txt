@@ -11,7 +11,7 @@ local TUIXUI_ui = {}
  local Utility = {} 
  local Objects = {} 
   
- function Library:DraggingEnabled(frame, parent) 
+ function TUIXUI_ui:DraggingEnabled(frame, parent) 
   
          parent = parent or frame 
   
@@ -50,7 +50,7 @@ local TUIXUI_ui = {}
          tween:Create(obj, tweeninfo(duration, ...), properties):Play() 
  end 
   
- function Library:tween(object, goal, callback) 
+ function TUIXUI_ui:tween(object, goal, callback) 
          local tween = tween:Create(object, tweeninfo2, goal) 
          tween.Completed:Connect(callback or function() end) 
          tween:Play() 
@@ -58,7 +58,7 @@ local TUIXUI_ui = {}
   
  local LibName = "UI_"..tostring(math.random(1, 100))..tostring(math.random(1,50))..tostring(math.random(1, 100)) 
   
- function Library:ToggleUI() 
+ function TUIXUI_ui:ToggleUI() 
          if game.CoreGui[LibName].Enabled then 
                  game.CoreGui[LibName].Enabled = false 
          else 
@@ -66,16 +66,16 @@ local TUIXUI_ui = {}
          end 
  end 
   
- function Library:DestroyUI() 
+ function TUIXUI_ui:DestroyUI() 
          if game:GetService("CoreGui"):FindFirstChild(LibName) then 
                  game:GetService("CoreGui"):FindFirstChild(LibName):Destroy() 
          end 
  end 
   
- function Library:Create(TitleText) 
+ function TUIXUI_ui:Create(TitleText) 
          TitleText = TitleText or "Untitled" 
   
-         local UILibrary = Instance.new("ScreenGui") 
+         local UITUIXUI_ui = Instance.new("ScreenGui") 
          local Main = Instance.new("Frame") 
          local UICorner = Instance.new("UICorner") 
          local TopBar = Instance.new("Frame") 
@@ -100,13 +100,13 @@ local TUIXUI_ui = {}
          local UIGradient = Instance.new("UIGradient") 
          local TabsFolder = Instance.new("Folder") 
   
-         Library:DraggingEnabled(TopBar, Main) 
+         TUIXUI_ui:DraggingEnabled(TopBar, Main) 
   
-         UILibrary.Name = LibName 
-         UILibrary.Parent = game:GetService("CoreGui") 
+         UITUIXUI_ui.Name = LibName 
+         UITUIXUI_ui.Parent = game:GetService("CoreGui") 
   
          Main.Name = "Main" 
-         Main.Parent = UILibrary 
+         Main.Parent = UITUIXUI_ui 
          Main.AnchorPoint = Vector2.new(0.5, 0.5) 
          Main.BackgroundColor3 = Color3.fromRGB(10, 10, 10) 
          Main.Position = UDim2.new(0.499624401, 0, 0.432387859, 0) 
@@ -117,7 +117,7 @@ local TUIXUI_ui = {}
   
          TopBar.Name = "TopBar" 
          TopBar.Parent = Main 
-         TopBar.BackgroundColor3 = Color3.fromRGB(, 255, 255) 
+         TopBar.BackgroundColor3 = Color3.fromRGB(20, 20, 20) 
          TopBar.Size = UDim2.new(1, 0, 0, 30) 
   
          UICorner_2.CornerRadius = UDim.new(0, 0) 
@@ -126,7 +126,7 @@ local TUIXUI_ui = {}
          Extension.Name = "Extension" 
          Extension.Parent = TopBar 
          Extension.AnchorPoint = Vector2.new(0, 1) 
-         Extension.BackgroundColor3 = Color3.fromRGB(255, 255, 255) 
+         Extension.BackgroundColor3 = Color3.fromRGB(20, 20, 20) 
          Extension.BorderSizePixel = 0 
          Extension.Position = UDim2.new(0, 0, 1, 0) 
          Extension.Size = UDim2.new(1, 0, 0.5, 0) 
@@ -168,7 +168,7 @@ local TUIXUI_ui = {}
                  DropShadowHolder.Visible = false 
                  TopBar.Visible = false 
                  wait(1.5) 
-                 Library:DestroyUI() 
+                 TUIXUI_ui:DestroyUI() 
          end) 
   
          Line.Name = "Line" 
@@ -1030,7 +1030,7 @@ local TUIXUI_ui = {}
   
                                  Title_3.Size = UDim2.new(Title_3.Size.X.Scale, Title_3.Size.X.Offset, 0, math.huge) 
                                  Title_3.Size = UDim2.new(Title_3.Size.X.Scale, Title_3.Size.X.Offset, 0, Title_3.TextBounds.Y) 
-                                 Library:tween(Warning, {Size = UDim2.new(Warning.Size.X.Scale, Warning.Size.X.Offset, 0, Title_3.TextBounds.Y + 12)}) 
+                                 TUIXUI_ui:tween(Warning, {Size = UDim2.new(Warning.Size.X.Scale, Warning.Size.X.Offset, 0, Title_3.TextBounds.Y + 12)}) 
                          end 
   
                          WarningLabell:_update() 
@@ -1108,7 +1108,7 @@ local TUIXUI_ui = {}
   
                                  Title_4.Size = UDim2.new(Title_4.Size.X.Scale, Title_4.Size.X.Offset, 0, math.huge) 
                                  Title_4.Size = UDim2.new(Title_4.Size.X.Scale, Title_4.Size.X.Offset, 0, Title_4.TextBounds.Y) 
-                                 Library:tween(Info, {Size = UDim2.new(Info.Size.X.Scale, Info.Size.X.Offset, 0, Title_4.TextBounds.Y + 12)}) 
+                                 TUIXUI_ui:tween(Info, {Size = UDim2.new(Info.Size.X.Scale, Info.Size.X.Offset, 0, Title_4.TextBounds.Y + 12)}) 
                          end 
   
                          InfoLabell:_update() 
@@ -1185,7 +1185,7 @@ local TUIXUI_ui = {}
   
                                  Title_5.Size = UDim2.new(Title_5.Size.X.Scale, Title_5.Size.X.Offset, 0, math.huge) 
                                  Title_5.Size = UDim2.new(Title_5.Size.X.Scale, Title_5.Size.X.Offset, 0, Title_5.TextBounds.Y) 
-                                 Library:tween(Label, {Size = UDim2.new(Label.Size.X.Scale, Label.Size.X.Offset, 0, Title_5.TextBounds.Y + 12)}) 
+                                 TUIXUI_ui:tween(Label, {Size = UDim2.new(Label.Size.X.Scale, Label.Size.X.Offset, 0, Title_5.TextBounds.Y + 12)}) 
                          end 
   
                          Labell:_update() 
