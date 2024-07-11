@@ -2,7 +2,7 @@ local TUIXUI_ui = {}
   
  local tween = game:GetService("TweenService") 
  local tweeninfo = TweenInfo.new 
- local tweeninfo2 = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut) 
+ local Tab = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut) 
  local input = game:GetService("UserInputService") 
  local run = game:GetService("RunService") 
  local mouse = game.Players.LocalPlayer:GetMouse() 
@@ -51,7 +51,7 @@ local TUIXUI_ui = {}
  end 
   
  function TUIXUI_ui:tween(object, goal, callback) 
-         local tween = tween:Create(object, tweeninfo2, goal) 
+         local tween = tween:Create(object, Tab, goal) 
          tween.Completed:Connect(callback or function() end) 
          tween:Play() 
  end 
@@ -174,7 +174,7 @@ local TUIXUI_ui = {}
          Line.Name = "Line" 
          Line.Parent = TopBar 
          Line.AnchorPoint = Vector2.new(0, 1) 
-         Line.BackgroundColor3 = Color3.fromRGB(81, 81, 81) 
+         Line.BackgroundColor3 = Color3.fromRGB(20, 20, 20) 
          Line.BorderSizePixel = 0 
          Line.Position = UDim2.new(0, 0, 1, 0) 
          Line.Size = UDim2.new(1, 0, 0, 1) 
