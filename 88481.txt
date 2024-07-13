@@ -2,7 +2,7 @@ local TUIXUI_ui = {}
   
  local tween = game:GetService("TweenService") 
  local tweeninfo = TweenInfo.new 
- local Tab = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut) 
+ local tweeninfo2 = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut) 
  local input = game:GetService("UserInputService") 
  local run = game:GetService("RunService") 
  local mouse = game.Players.LocalPlayer:GetMouse() 
@@ -51,7 +51,7 @@ local TUIXUI_ui = {}
  end 
   
  function TUIXUI_ui:tween(object, goal, callback) 
-         local tween = tween:Create(object, Tab, goal) 
+         local tween = tween:Create(object, tweeninfo2, goal) 
          tween.Completed:Connect(callback or function() end) 
          tween:Play() 
  end 
@@ -126,7 +126,7 @@ local TUIXUI_ui = {}
          Extension.Name = "Extension" 
          Extension.Parent = TopBar 
          Extension.AnchorPoint = Vector2.new(0, 1) 
-         Extension.BackgroundColor3 = Color3.fromRGB(255, 255, 255) 
+         Extension.BackgroundColor3 = Color3.fromRGB(20, 20, 20) 
          Extension.BorderSizePixel = 0 
          Extension.Position = UDim2.new(0, 0, 1, 0) 
          Extension.Size = UDim2.new(1, 0, 0.5, 0) 
@@ -150,7 +150,7 @@ local TUIXUI_ui = {}
          Close.Parent = TopBar 
          Close.AnchorPoint = Vector2.new(1, 0.5) 
          Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255) 
-         Close.BackgroundTransparency = 0.05 
+         Close.BackgroundTransparency = 1.000 
          Close.Position = UDim2.new(1, -8, 0.5, 0) 
          Close.Size = UDim2.new(0, 14, 0, 14) 
          Close.Image = "rbxassetid://" 
@@ -174,7 +174,7 @@ local TUIXUI_ui = {}
          Line.Name = "Line" 
          Line.Parent = TopBar 
          Line.AnchorPoint = Vector2.new(0, 1) 
-         Line.BackgroundColor3 = Color3.fromRGB(20, 20, 20) 
+         Line.BackgroundColor3 = Color3.fromRGB(81, 81, 81) 
          Line.BorderSizePixel = 0 
          Line.Position = UDim2.new(0, 0, 1, 0) 
          Line.Size = UDim2.new(1, 0, 0, 1) 
@@ -212,9 +212,9 @@ local TUIXUI_ui = {}
   
          Hide.Name = "Hide" 
          Hide.Parent = Navigation 
-         Hide.BackgroundColor3 = Color3.fromRGB(255, 255, 255) 
+         Hide.BackgroundColor3 = Color3.fromRGB(50, 50, 50) 
          Hide.BorderSizePixel = 0 
-         Hide.Size = UDim2.new(0, 0, 0, 20) 
+         Hide.Size = UDim2.new(1, 0, 0, 20) 
   
          Hide2.Name = "Hide2" 
          Hide2.Parent = Navigation 
