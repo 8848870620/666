@@ -117,8 +117,8 @@ local TUIXUI_ui = {}
   
          TopBar.Name = "TopBar" 
          TopBar.Parent = Main 
-         TopBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255) --
-         TopBar.Size = UDim2.new(1, 0, 0, 30) 
+         TopBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30) 
+         TopBar.Size = UDim2.new(3, 0, 0, 30) 
   
          UICorner_2.CornerRadius = UDim.new(0, 0) 
          UICorner_2.Parent = TopBar 
