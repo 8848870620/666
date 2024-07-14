@@ -118,7 +118,7 @@ local TUIXUI_ui = {}
          TopBar.Name = "TopBar" 
          TopBar.Parent = Main 
          TopBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30) 
-         TopBar.Size = UDim2.new(3, 0, 0, 30) 
+         TopBar.Size = UDim2.new(1, 0, 0, 35) 
   
          UICorner_2.CornerRadius = UDim.new(0, 0) 
          UICorner_2.Parent = TopBar 
@@ -126,7 +126,7 @@ local TUIXUI_ui = {}
          Extension.Name = "Extension" 
          Extension.Parent = TopBar 
          Extension.AnchorPoint = Vector2.new(0, 1) 
-         Extension.BackgroundColor3 = Color3.fromRGB(20, 20, 20) 
+         Extension.BackgroundColor3 = Color3.fromRGB(30, 30, 30) 
          Extension.BorderSizePixel = 0 
          Extension.Position = UDim2.new(0, 0, 1, 0) 
          Extension.Size = UDim2.new(1, 0, 0.5, 0) 
