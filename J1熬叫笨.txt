@@ -25,7 +25,7 @@ Toggle.MouseButton1Click:connect(function()
 Library:ToggleUI()
 end)
 
-local HomeTab = Window:Tab("通坤脚本","rbxassetid://10888331510")
+local HomeTab = Window:Tab("通坤脚本","rbxassetid://137545349611379")
 local PlayerTab = Window:Tab("玩家","rbxassetid://12296135476")
 local VisualTab = Window:Tab("画面","rbxassetid://12308581351")
 
