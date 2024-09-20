@@ -25,19 +25,11 @@ Toggle.MouseButton1Click:connect(function()
 Library:ToggleUI()
 end)
 
-local HomeTab = Window:Tab("通坤脚本","rbxassetid://137545349611379")
-local PlayerTab = Window:Tab("玩家","rbxassetid://12296135476")
-local VisualTab = Window:Tab("画面","rbxassetid://12308581351")
+local HomeTab = Window:Tab("通坤脚本","rbxassetid://14491692101")
+local PlayerTab = Window:Tab("玩家","rbxassetid://14491692101")
+local VisualTab = Window:Tab("画面","rbxassetid://14491692101")
 
 HomeTab:Section("设置")
-
-HomeTab:Slider("点击框大小(滑块)", 0,300, function(value)
-    getgenv().HitboxSize = value
-end)
-
-HomeTab:TextBox("点击框大小(文本框)", function(value)
-    getgenv().HitboxSize = value
-end)
 
 HomeTab:TextBox("设置血量", function(value)
     game.Players.LocalPlayer.Character.Humanoid.Health = value
