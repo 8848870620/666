@@ -120,14 +120,14 @@ local TUIXIU_ui = {}
          TopBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30) 
          TopBar.Size = UDim2.new(1, 0, 0, 35) 
   
-         UICorner_2.CornerRadius = UDim.new(0, 0) 
+         UICorner_2.CornerRadius = UDim.new(1, 1) 
          UICorner_2.Parent = TopBar 
   
          Extension.Name = "Extension" 
          Extension.Parent = TopBar 
          Extension.AnchorPoint = Vector2.new(0, 1) 
          Extension.BackgroundColor3 = Color3.fromRGB(30, 30, 30) 
-         Extension.BorderSizePixel = 0 
+         Extension.BorderSizePixel = 5 
          Extension.Position = UDim2.new(0, 0, 1, 0) 
          Extension.Size = UDim2.new(1, 0, 0.5, 0) 
   
