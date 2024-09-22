@@ -112,7 +112,7 @@ local TUIXIU_ui = {}
          Main.Position = UDim2.new(0.499624401, 0, 0.432387859, 0) 
          Main.Size = UDim2.new(0, 700, 0, 350) 
   
-         UICorner.CornerRadius = UDim.new(100, 4) 
+         UICorner.CornerRadius = UDim.new(100, 100) 
          UICorner.Parent = Main 
   
          TopBar.Name = "TopBar" 
