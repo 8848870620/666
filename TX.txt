@@ -1,0 +1,157 @@
+local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/v9Pdp6kx"))()
+
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "忍者刷人头",
+    Text = "JsYb制作🤓",
+    Duration = 6, 
+})
+
+local Window = OrionLib:MakeWindow({Name = "Vu你的专属", HidePremium = false, SaveConfig = true, IntroText = "忍者刷人头", ConfigFolder = "1"})
+
+task.spawn(function()
+    local Tab = Window:MakeTab({
+        Name = "功能",
+        Icon = "rbxassetid://7734068321",
+        PremiumOnly = false
+    })
+
+    Tab:AddToggle({
+        Name = "传送至山丘(防止大号掉)",
+        Default = false,
+        Callback = function(state)
+            if state then
+                local player = game.Players.LocalPlayer
+                if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+                    player.Character.HumanoidRootPart.CFrame = CFrame.new(235.66, 89.40, -287.68)
+                end
+            end
+        end
+    })
+
+    Tab:AddButton({
+        Name = "飞行",
+        Callback = function()
+            task.spawn(function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/dt2BTaKU", true))()
+            end)
+        end
+    })
+
+    Tab:AddToggle({
+        Name = "快速手里剑",
+        Default = false,
+        Callback = function(state)
+            task.spawn(function()
+                while wait(0.001) do
+                    if state then
+                        local player = game.Players.LocalPlayer
+                        if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+                            local Mouse = player:GetMouse()
+                            local velocity = 1000
+                            for _, p in pairs(game.Workspace.shurikensFolder:GetChildren()) do
+                                if p.Name == "Handle" and p:FindFirstChild("BodyVelocity") then
+                                    local bv = p:FindFirstChildOfClass("BodyVelocity")
+                                    bv.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+                                    bv.Velocity = Mouse.Hit.lookVector * velocity
+                                end
+                            end
+                        end
+                    end
+                end
+            end)
+        end
+    })
+
+    Tab:AddToggle({
+        Name = "自动挥刀",
+        Default = false,
+        Callback = function(state)
+            local bai = {}
+            bai.antohuidao = false
+            if state then
+                bai.antohuidao = true
+                task.spawn(function()
+                    while bai.antohuidao do
+                        task.wait()
+                        local character = game.Players.LocalPlayer.Character
+                        if character and character:FindFirstChild("HumanoidRootPart") then
+                            if character:FindFirstChildOfClass("Tool") then
+                                game.Players.LocalPlayer.ninjaEvent:FireServer("swingKatana")
+                            else
+                                for _, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                                    if v.ClassName == "Tool" then
+                                        if v:FindFirstChild("attackShurikenScript") then
+                                            character.Humanoid:EquipTool(v)
+                                        elseif v:FindFirstChild("attackKatanaScript") then
+                                            character.Humanoid:EquipTool(v)
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end)
+            else
+                bai.antohuidao = false
+            end
+        end
+    })
+
+    local function tp(position)
+        local localPlayer = game.Players.LocalPlayer
+        if localPlayer.Character and localPlayer.Character:FindFirstChild("HumanoidRootPart") then
+            localPlayer.Character:SetPrimaryPartCFrame(position)
+        end
+    end
+
+    Tab:AddToggle({
+        Name = "传送到大号，展开好像也行但麻烦所以💩(可能无法关闭但问题不大)",
+        Default = false,
+        Callback = function(state)
+            task.spawn(function()
+                while wait(0.1) do
+                    if state then
+                        local targetPlayer = game.Players:FindFirstChild("QAQ_MaS")
+                        if targetPlayer and targetPlayer.Character and targetPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                            tp(targetPlayer.Character.HumanoidRootPart.CFrame)
+                        end
+                    end
+                end
+            end)
+        end
+    })
+
+    Tab:AddTextbox({
+        Name = "范围修改",
+        Default = "",
+        TextDisappear = true,
+        Callback = function(value)
+            local headSize = value
+            local disabled = true
+            local function modifyPlayers()
+                for i, v in next, game:GetService('Players'):GetPlayers() do
+                    if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+                        pcall(function()
+                            local rootPart = v.Character and v.Character.HumanoidRootPart
+                            if rootPart then
+                                rootPart.Size = Vector3.new(headSize, headSize, headSize)
+                                rootPart.Transparency = 0
+                                rootPart.BrickColor = BrickColor.new("Really blue")
+                                rootPart.Material = "Neon"
+                                rootPart.CanCollide = false
+                            end
+                        end)
+                    end
+                end
+            end
+            game:GetService('RunService').RenderStepped:connect(function()
+                if disabled then
+                    modifyPlayers()
+                end
+            end)
+        end
+    })
+
+end)
