@@ -87,7 +87,7 @@ local Language = {
         Race = "赛跑",
         Get = "收集",
         Put = "放置",
-        Fly = "飞行",
+        
         Boost = "加速",
         Buy = "购买",
         Item = "物品",
