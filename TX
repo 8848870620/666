@@ -19,7 +19,7 @@ local ContentTable = {
     "😱 TX 脚本 😱",
     "😎 关闭自动执行 😎", 
     "🥰 感谢支持 🥰",
-    "🤑 更新时间：2025.2.15"，
+    "🤑 更新时间：2025.2.15",
 }
 
 local TextLabel = Instance.new("TextLabel")
