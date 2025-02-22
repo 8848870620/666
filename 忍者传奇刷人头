@@ -9,7 +9,17 @@ CoreGui:SetCore("SendNotification", {
     Duration = 6, 
 })
 
-print("反挂机开启")
+CoreGui:SetCore("SendNotification", {
+    Title = "忍者刷人头",
+    Text = "更新时间：2025年2月22日",
+    Duration = 10, 
+})
+
+print("vuvu你是我的神")
+print("vuvu你是我男？/女神")
+print("应该不会看这里吧😖")
+print("🤪🙁😎🤓🤑😲🤗😳😭")
+
 local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
     vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
