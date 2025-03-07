@@ -16,10 +16,10 @@ UICorner.CornerRadius = UDim.new(0,24)
 UICorner.Parent = MainFrame
 
 local ContentTable = {
-    "😱 TX 脚本 😱",
-    "😎 关闭自动执行 😎", 
-    "🥰 感谢支持 🥰",
-    "🤑 更新时间：2025.2.15",
+    "😱 TX 脚本跑路了 😱",
+    "😎 其实是准备大更新 😎", 
+    "🥰 更新内容包括但不限于：新的UI，更强的兼容，更强更多的功能 🥰",
+    "🤑 预计暑假前完成 🤑",
 }
 
 local TextLabel = Instance.new("TextLabel")
